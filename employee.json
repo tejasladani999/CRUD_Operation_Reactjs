@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "department": "Purchase",
+      "employeeName": "Hardik",
+      "gender": "Male",
+      "experience": "2020-12-01",
+      "deptType": "Government",
+      "id": "iJ3adRP"
+    },
+    {
+      "department": "R&D",
+      "employeeName": "Roshani",
+      "gender": "Female",
+      "experience": "2021-01-01",
+      "deptType": "Private",
+      "id": "wlnT8up"
+    },
+    {
+      "department": "Purchase",
+      "employeeName": "Tejas",
+      "gender": "Male",
+      "experience": "2023-06-12",
+      "deptType": "Private",
+      "id": "p3TgceW"
+    },
+    {
+      "department": "Sales",
+      "employeeName": "Sunil",
+      "gender": "Male",
+      "experience": "2020-09-02",
+      "deptType": "Government",
+      "id": "xhEMZ-n"
+    },
+    {
+      "department": "WareHouse",
+      "employeeName": "Sunny Leon",
+      "gender": "Female",
+      "experience": "2021-11-30",
+      "deptType": "Private",
+      "id": "cQODd6d"
+    },
+    {
+      "department": "Sales",
+      "employeeName": "Tarun",
+      "gender": "Male",
+      "experience": "2022-01-04",
+      "deptType": "Private",
+      "id": "x2oegrT"
+    }
+  ]
+}
