@@ -14,9 +14,6 @@ const EditEmployee = () => {
     deptType: 'Government',
   });
 
-  const [successMessage, setSuccessMessage] = useState(null);
-  const [errorMessage, setErrorMessage] = useState(null);
-
   useEffect(() => {
     // Fetch the existing employee data using the ID
     axios
@@ -32,7 +29,7 @@ const EditEmployee = () => {
         });
       })
       .catch((error) => {
-        setErrorMessage('Error fetching employee data.');
+        alert('Error fetching employee data.');
       });
   }, [id]);
 
@@ -50,7 +47,6 @@ const EditEmployee = () => {
     axios
       .put(`http://localhost:3200/posts/${id}`, formData) // Replace with your API endpoint
       .then((response) => {
-        setSuccessMessage('Data updated successfully.');
         alert('Employee details successfully updated!')
         navigate("/");
       })
@@ -61,7 +57,7 @@ const EditEmployee = () => {
 
   return (
     <div className='container'>
-      <h2>Edit Employee Details</h2>
+      <h1 style={{margin:20}} align="center">Edit Employee Details</h1>
       <form onSubmit={handleSubmit}>
         <div className='form-group' >
           <label htmlFor="department">Department:</label>
