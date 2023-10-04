@@ -7,9 +7,9 @@ import moment from "moment";
 const Home = () => {
   const [data, setData] = useState([]);
 
-  getData( () => { 
-  useEffect(() => {
-    axios.get('http://localhost:3200/posts')
+ const getData = () => { 
+    axios
+    .get('http://localhost:3200/posts')
       .then((response) => {
         console.log(response.data);
         setData(response.data);
@@ -17,8 +17,11 @@ const Home = () => {
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
-  }, []); 
-})
+  }; 
+
+  useEffect(() => {
+    getData();
+}, []);
 
   const handleDelete = (id) => {
     axios
