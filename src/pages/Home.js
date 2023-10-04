@@ -7,6 +7,7 @@ import moment from "moment";
 const Home = () => {
   const [data, setData] = useState([]);
 
+  getData( () => { 
   useEffect(() => {
     axios.get('http://localhost:3200/posts')
       .then((response) => {
@@ -17,6 +18,20 @@ const Home = () => {
         console.error('Error fetching data:', error);
       });
   }, []); 
+})
+
+  const handleDelete = (id) => {
+    axios
+      .delete(`http://localhost:3200/posts/${id}`)
+      .then((response) => {
+        console.log(response.data);
+        alert('Employee is Deleted!');
+        getData();
+      })
+      .catch((error) => {
+        console.error('Error deleting data:', error);
+      });
+  };
 
   return (
     <div  align="center" className='center-table'>
@@ -28,10 +43,10 @@ const Home = () => {
             <th>Employee Name</th>
             <th>Gender</th>
             <th>Experience</th>
-            <th>DeptType</th>
+            <th>Department Type</th>
             <th colSpan={2}>Action   
               <Link to="/EmployeeForm"> 
-              <button className='btn btn-outline-primary'>Add Employee</button>
+              <button className='btn btn-outline-primary' style={{marginLeft:"5px"}}>Add Employee</button>
               </Link>
             </th>
           </tr>
@@ -49,9 +64,7 @@ const Home = () => {
                 <Link to={`/EditEmployee/${employee.id}`}>
                 <button className='btn btn-outline-warning' style={{marginRight:"50px"}}>Edit</button>
                 </Link>
-                <Link to={`/EmployeeDelete/${employee.id}`}>
-                <button className='btn btn-outline-danger'>Delete</button>
-                </Link>
+                <button className='btn btn-outline-danger' onClick={() => handleDelete(employee.id)}>Delete</button>
               </td>
             </tr>
           ))}
