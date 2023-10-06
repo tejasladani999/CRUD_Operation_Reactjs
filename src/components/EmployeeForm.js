@@ -7,9 +7,9 @@ const EmployeeForm = () => {
   const [formData, setFormData] = useState({
     department: '',
     employeeName: '',
-    gender: 'Male', // Default value
+    gender: 'Male', 
     experience: '',
-    deptType: 'Government', // Default value
+    deptType: 'Government',
   });
 
   const navigate = useNavigate();
@@ -24,15 +24,10 @@ const EmployeeForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add validation here if needed
 
         // Generate a unique ID for each entry (You can use a library like 'uuid' for this)
         const uniqueId = uuidv4();
 
-        // Create a new employee object with the unique ID
-        // const newEmployee = {id: uniqueId, ...formData };
-
-    // Send data to a JSON file (or API endpoint)
     axios
       .post('http://localhost:3200/posts', formData) // Replace with your API endpoint or JSON file
       .then((response) => {
@@ -56,7 +51,7 @@ const EmployeeForm = () => {
 
   return (
     <div className='container'>
-      <h2>Insert Employee Details</h2>
+      <h1 style={{margin:20}} align="center">Insert Employee Details</h1>
       <form onSubmit={handleSubmit}>
         <div className='form-group' >
           <label htmlFor="department">Department:</label>

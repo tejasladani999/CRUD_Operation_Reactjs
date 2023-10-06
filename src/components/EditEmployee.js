@@ -17,7 +17,7 @@ const EditEmployee = () => {
   useEffect(() => {
     // Fetch the existing employee data using the ID
     axios
-      .get(`http://localhost:3200/posts/${id}`) // Replace with your API endpoint
+      .get(`http://localhost:3200/posts/${id}`) 
       .then((response) => {
         const employeeData = response.data;
         setFormData({
@@ -45,7 +45,7 @@ const EditEmployee = () => {
     e.preventDefault();
     // Update the employee data
     axios
-      .put(`http://localhost:3200/posts/${id}`, formData) // Replace with your API endpoint
+      .put(`http://localhost:3200/posts/${id}`, formData) 
       .then((response) => {
         alert('Employee details successfully updated!')
         navigate("/");
