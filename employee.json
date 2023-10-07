@@ -25,12 +25,20 @@
       "id": "7bJoAiQ"
     },
     {
-      "department": "Production",
+      "department": "Sales",
       "employeeName": "Dhara",
+      "gender": "Female",
+      "experience": "2020-01-01",
+      "deptType": "Private",
+      "id": "1rnU6dy"
+    },
+    {
+      "department": "Production",
+      "employeeName": "Miral",
       "gender": "Female",
       "experience": "2020-11-01",
       "deptType": "Private",
-      "id": "1rnU6dy"
+      "id": "1rnU6dx"
     }
   ]
 }
