@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link} from 'react-router-dom';
 import moment from "moment";
-
+import $ from 'jquery';
+import 'datatables.net';
+import 'datatables.net-dt/css/jquery.dataTables.min.css';
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -36,10 +38,18 @@ const Home = () => {
       });
   };
 
+  useEffect(() => {
+    const initializeDataTables = setTimeout(() => {
+      $('#Table').DataTable();
+    }, 500); 
+  
+    return () => clearTimeout(initializeDataTables);
+  }, [data]);
+
   return (
-    <div  align="center" className='center-table'>
-      <h1 style={{margin:20}}>Employee Management</h1>
-      <table id='Table' className='table table-striped table-bordered table-hover' align='center' style={{width:"80%"}}>
+    <div style={{alignItems:"center"}}>
+      <h1 align="center" style={{margin:20}}>Employee Management</h1>
+      <table id='Table' className='table table-striped'>
         <thead>
           <tr>
             <th>Department</th>
@@ -47,7 +57,7 @@ const Home = () => {
             <th>Gender</th>
             <th>Experience</th>
             <th>Department Type</th>
-            <th colSpan={2}>Action   
+            <th>Action   
               <Link to="/EmployeeForm"> 
               <button className='btn btn-outline-primary' style={{marginLeft:"5px"}}>Add Employee</button>
               </Link>
@@ -63,7 +73,6 @@ const Home = () => {
               <td>{moment(employee.experience).fromNow(true)}</td>
               <td>{employee.deptType}</td>
               <td>
-                {/* Add action buttons or links here */}
                 <Link to={`/EditEmployee/${employee.id}`}>
                 <button className='btn btn-outline-warning' style={{marginRight:"50px"}}>Edit</button>
                 </Link>
