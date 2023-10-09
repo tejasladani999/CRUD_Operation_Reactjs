@@ -17,6 +17,14 @@
       "id": "x2oegrT"
     },
     {
+      "department": "Sales",
+      "employeeName": "Tanmay",
+      "gender": "Male",
+      "experience": "2022-01-04",
+      "deptType": "Private",
+      "id": "x2oegrY"
+    },
+    {
       "department": "Purchase",
       "employeeName": "Assan",
       "gender": "Male",
