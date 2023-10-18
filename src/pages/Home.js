@@ -59,7 +59,7 @@ const Home = () => {
             <th>Department Type</th>
             <th>Action   
               <Link to="/EmployeeForm"> 
-              <button className='btn btn-outline-primary' style={{marginLeft:"5px"}}>Add Employee</button>
+              <button className='btn btn-outline-primary mx-4'>Add Employee</button>
               </Link>
             </th>
           </tr>
@@ -74,7 +74,7 @@ const Home = () => {
               <td>{employee.deptType}</td>
               <td>
                 <Link to={`/EditEmployee/${employee.id}`}>
-                <button className='btn btn-outline-warning' style={{marginRight:"50px"}}>Edit</button>
+                <button className='btn btn-outline-warning mx-5'>Edit</button>
                 </Link>
                 <button className='btn btn-outline-danger' onClick={() => handleDelete(employee.id)}>Delete</button>
               </td>
