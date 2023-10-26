@@ -4,7 +4,7 @@
       "department": "Sales",
       "employeeName": "Sunil",
       "gender": "Male",
-      "experience": "2020-09-02",
+      "experience": "2023-10-02",
       "deptType": "Government",
       "id": "xhEMZ-n"
     },
@@ -15,14 +15,6 @@
       "experience": "2022-01-04",
       "deptType": "Private",
       "id": "x2oegrT"
-    },
-    {
-      "department": "Purchase",
-      "employeeName": "Assan",
-      "gender": "Male",
-      "experience": "2020-12-01",
-      "deptType": "Government",
-      "id": "7bJoAiQ"
     },
     {
       "department": "Purchase",
@@ -41,6 +33,14 @@
       "id": "1rnU6dy"
     },
     {
+      "department": "Sales",
+      "employeeName": "Jignasha",
+      "gender": "Female",
+      "experience": "2021-01-01",
+      "deptType": "Private",
+      "id": "1rnU6dv"
+    },
+    {
       "department": "Production",
       "employeeName": "Miral",
       "gender": "Female",
@@ -55,14 +55,6 @@
       "experience": "2020-12-01",
       "deptType": "Government",
       "id": "cqJ5pOH"
-    },
-    {
-      "department": "Production",
-      "employeeName": "Tejal",
-      "gender": "Female",
-      "experience": "2021-12-01",
-      "deptType": "Private",
-      "id": "NDYiey3"
     },
     {
       "department": "WareHouse",
