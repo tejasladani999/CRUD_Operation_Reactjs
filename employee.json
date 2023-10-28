@@ -79,14 +79,6 @@
       "experience": "2023-01-01",
       "deptType": "Private",
       "id": "AbKUB-o"
-    },
-    {
-      "department": "Sales",
-      "employeeName": "Sagar",
-      "gender": "Male",
-      "experience": "2023-01-31",
-      "deptType": "Private",
-      "id": "ePbL0_q"
     }
   ]
 }
