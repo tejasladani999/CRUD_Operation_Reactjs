@@ -33,6 +33,14 @@
       "id": "1rnU6dx"
     },
     {
+      "department": "Production",
+      "employeeName": "Mira",
+      "gender": "Female",
+      "experience": "2020-11-01",
+      "deptType": "Private",
+      "id": "1rnU7dx"
+    },
+    {
       "department": "R&D",
       "employeeName": "Hardik",
       "gender": "Male",
